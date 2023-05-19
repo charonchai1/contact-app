@@ -1,5 +1,11 @@
 <template>
-    <h2>Spiner</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <img src="../assets/Loading_icon.gif" class="d-block m-auto" alt="">
+                </div>
+            </div>
+        </div>
 </template>
 
 <script>

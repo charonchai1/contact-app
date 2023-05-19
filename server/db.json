@@ -8,7 +8,7 @@
         "address": "123 Main St",
         "username": "johndoe",
         "password": "password123",
-        "photoUrl": "https://example.com/photos/johndoe.jpg"
+        "photoUrl": "https://img.icons8.com/?size=512&id=nXduhA13SMUu&format=png"
       },
       {
         "id": 2,
@@ -18,7 +18,7 @@
         "address": "456 Elm St",
         "username": "janesmith",
         "password": "password456",
-        "photoUrl": "https://example.com/photos/janesmith.jpg"
+        "photoUrl": "https://img.icons8.com/?size=512&id=6sDodBWYyvgl&format=png"
       },
       {
         "id": 3,
@@ -28,7 +28,7 @@
         "address": "789 Oak Ave",
         "username": "mikejohnson",
         "password": "password789",
-        "photoUrl": "https://example.com/photos/mikejohnson.jpg"
+        "photoUrl": "https://img.icons8.com/?size=512&id=tRmI8xIcizxI&format=png"
       },
       {
         "id": 4,
@@ -38,7 +38,7 @@
         "address": "321 Pine St",
         "username": "sarahdavis",
         "password": "password321",
-        "photoUrl": "https://example.com/photos/sarahdavis.jpg"
+        "photoUrl": "https://img.icons8.com/?size=512&id=petMB2lJbUzu&format=png"
       },
       {
         "id": 5,
@@ -48,7 +48,7 @@
         "address": "567 Cedar Ave",
         "username": "robertwilson",
         "password": "password567",
-        "photoUrl": "https://example.com/photos/robertwilson.jpg"
+        "photoUrl": "https://img.icons8.com/?size=512&id=27irm8EoQrle&format=png"
       },
       {
         "id": 6,
@@ -58,7 +58,7 @@
         "address": "876 Maple Dr",
         "username": "emilytaylor",
         "password": "password876",
-        "photoUrl": "https://example.com/photos/emilytaylor.jpg"
+        "photoUrl": "https://img.icons8.com/?size=512&id=V8tVabAreXgU&format=png"
       },
       {
         "id": 7,
@@ -68,7 +68,7 @@
         "address": "654 Birch Ln",
         "username": "davidanderson",
         "password": "password654",
-        "photoUrl": "https://example.com/photos/davidanderson.jpg"
+        "photoUrl": "https://img.icons8.com/?size=512&id=aZ0WjSq1u1YB&format=png"
       },
       {
         "id": 8,
@@ -78,7 +78,7 @@
         "address": "432 Spruce Rd",
         "username": "oliviabrown",
         "password": "password432",
-        "photoUrl": "https://example.com/photos/oliviabrown.jpg"
+        "photoUrl": "https://img.icons8.com/?size=512&id=uJvr2y0vKaVi&format=png"
       }
     ]
 }
