@@ -96,7 +96,7 @@
                 class="col-sm-1 d-flex flex-column justify-content-center align-items-center"
               >
                 <router-link
-                  to="/contacts/view/:contactId"
+                  :to="`/contacts/view/${contact.id}`"
                   class="btn btn-warning my-1"
                 >
                   <i class="fa fa-eye"></i>

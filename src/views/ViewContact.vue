@@ -16,7 +16,7 @@
     <div class="row align-items-center">
       <div class="col-md-4">
         <img
-          src="https://img.icons8.com/?size=512&id=QYqNSpKRKelP&format=png"
+          :src="contact.photoUrl"
           alt=""
           class="contact-img-big"
         />
@@ -25,27 +25,27 @@
         <ul class="list-group">
           <li class="list-group-item">
             Name :
-            <span class="fw-bold">Name</span>
+            <span class="fw-bold">{{contact.name}}</span>
           </li>
           <li class="list-group-item">
             BirthDate :
-            <span class="fw-bold">BirthDate</span>
+            <span class="fw-bold">{{contact.birthDate}}}</span>
           </li>
           <li class="list-group-item">
             Mobile :
-            <span class="fw-bold">Mobile</span>
+            <span class="fw-bold">{{contact.mobile}}</span>
           </li>
           <li class="list-group-item">
             Address :
-            <span class="fw-bold">Address</span>
+            <span class="fw-bold">{{contact.address}}</span>
           </li>
           <li class="list-group-item">
             Username :
-            <span class="fw-bold">Username</span>
+            <span class="fw-bold">{{contact.username}}</span>
           </li>
           <li class="list-group-item">
             Password :
-            <span class="fw-bold">Password</span>
+            <span class="fw-bold">{{contact.password}}</span>
           </li>
         </ul>
       </div>
@@ -58,10 +58,31 @@
         </div>
      </div>
   </div>
+  <pre>{{contact}}</pre>
 </template>
 
 <script>
+import { ContactService } from '@/services/ContactService';
 export default {
   name: "ViewContact",
+  data: function(){
+    return{
+        contactId : this.$route.params.contactId,
+        loading : false,
+        contact: {},
+        errorMessage :null
+    }
+  },
+  created : async function (){
+    try {
+        this.loading = true;
+        let response = await ContactService.getContact(this.contactId);
+        this.contact = response.data;
+        this.loading = false;
+    } catch (error) {
+        this.errorMessage = error;
+        this.loading = false;
+    }
+  }
 };
 </script> 
