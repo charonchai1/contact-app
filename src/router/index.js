@@ -4,7 +4,7 @@ import ContactManager from "@/views/ContactManager";
 import AddContact from "@/views/AddContact"
 import EditContact from "@/views/EditContact"
 import ViewContact from "@/views/ViewContact"
-
+import PageNotFound from "@/views/PageNotFound"
 
 const routes = [
   {
@@ -32,6 +32,16 @@ const routes = [
     path: '/contacts/view/:contactId',
     name: 'ViewContact',
     component: ViewContact
+  },
+  {
+    path: '/contacts/view/:contactId',
+    name: 'ViewContact',
+    component: ViewContact
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    name: 'PageNotFound',
+    component: PageNotFound
   },
 
 
