@@ -4,6 +4,6 @@
 
 <script>
 export default {
-    name: "Contact Manager"
+    name: "ContactManager"
 }
 </script>
