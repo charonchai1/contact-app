@@ -15,8 +15,10 @@
             <input type="text" class="form-control" placeholder="Full Name" />
           </div>
           <div class="mb-2">
-             <label for="birthDate">Date of Birth:</label>
-    <input type="date" id="birthDate" v-model="birthDate">
+            <input type="text" class="form-control" placeholder="Photo URL" />
+          </div>
+          <div class="mb-2">
+            <input class="form-control" type="date" id="birthDate" v-model="birthDate" />
           </div>
           <div class="mb-2">
             <input type="number" class="form-control" placeholder="Mobile" />
@@ -31,10 +33,13 @@
             <input type="text" class="form-control" placeholder="Password" />
           </div>
           <div class="mb-2">
-            <input type="submit" class="btn btn-success" value="Create">
+            <input type="submit" class="btn btn-success" value="Create" />
           </div>
         </form>
       </div>
+        <div class="col-md-4">
+            <img src="https://img.icons8.com/?size=512&id=QYqNSpKRKelP&format=png" alt="" class="contact-img">
+        </div>
     </div>
   </div>
 </template>
