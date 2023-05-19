@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <router-link to="/">Test commit1</router-link> |
+    <router-link to="/">Test commit123</router-link> |
     <router-link to="/about">About</router-link>
   </nav>
   <router-view/>
