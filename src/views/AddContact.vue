@@ -13,29 +13,29 @@
       <div class="col-md-4">
         <form @submit.prevent="submitCreate()"> 
           <div class="mb-2">
-            <input v-model="contact.name" type="text" class="form-control" placeholder="Full Name" />
+            <input required v-model="contact.name" type="text" class="form-control" placeholder="Full Name" />
           </div>
           <div class="mb-2">
-            <input v-model="contact.photoUrl" type="text" class="form-control" placeholder="Photo URL" />
+            <input required v-model="contact.photoUrl" type="text" class="form-control" placeholder="Photo URL" />
           </div>
           <div class="mb-2">
             
-            <input  v-model="contact.birthdate" class="form-control" type="date" id="birthDate" />
+            <input required v-model="contact.birthdate" class="form-control" type="date" id="birthDate" />
           </div>
           <div class="mb-2">
-            <input v-model="contact.mobile"  type="number" class="form-control" placeholder="Mobile" />
+            <input required v-model="contact.mobile"  type="number" class="form-control" placeholder="Mobile" />
           </div>
           <div class="mb-2">
-            <input v-model="contact.address" type="text" class="form-control" placeholder="Address" />
+            <input required v-model="contact.address" type="text" class="form-control" placeholder="Address" />
           </div>
           <div class="mb-2">
-            <input v-model="contact.username" type="text" class="form-control" placeholder="Username" />
+            <input required v-model="contact.username" type="text" class="form-control" placeholder="Username" />
           </div>
           <div class="mb-2">
-            <input v-model="contact.password" type="text" class="form-control" placeholder="Password" />
+            <input required v-model="contact.password" type="text" class="form-control" placeholder="Password" />
           </div>
           <div class="mb-2">
-            <input type="submit" class="btn btn-success" value="Create" />
+            <input required type="submit" class="btn btn-success" value="Create" />
           </div>
         </form>
       </div>

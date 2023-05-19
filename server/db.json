@@ -32,7 +32,7 @@
     },
     {
       "id": 4,
-      "name": "Sarah Davis",
+      "name": "Sarah Mohamend",
       "birthdate": "1993-12-03",
       "mobile": "4449876543",
       "address": "321 Pine St",
@@ -79,16 +79,6 @@
       "username": "oliviabrown",
       "password": "password432",
       "photoUrl": "https://img.icons8.com/?size=512&id=uJvr2y0vKaVi&format=png"
-    },
-    {
-      "name": "charonchai phaengphirum",
-      "birthdate": "",
-      "mobile": 930240232,
-      "address": "177/3 smothong",
-      "username": "jame",
-      "password": "1234",
-      "photoUrl": "",
-      "id": 9
     }
   ]
 }

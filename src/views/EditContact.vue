@@ -15,41 +15,41 @@
   <div class="container mt-3">
     <div class="row">
       <div class="col-md-4">
-        <form>
+        <form @submit.prevent ="updateSubmit()">
           <div class="mb-2">
-            <input type="text" class="form-control" placeholder="Full Name" />
+            <input required v-model="contact.name" type="text" class="form-control" placeholder="Full Name" />
           </div>
           <div class="mb-2">
-            <input type="text" class="form-control" placeholder="Photo URL" />
+            <input required v-model="contact.photoUrl" type="text" class="form-control" placeholder="Photo URL" />
           </div>
           <div class="mb-2">
             <input
-              class="form-control"
+              required class="form-control"
               type="date"
               id="birthDate"
-              v-model="birthDate"
+              v-model="contact.birthdate"
             />
           </div>
           <div class="mb-2">
-            <input type="number" class="form-control" placeholder="Mobile" />
+            <input required v-model="contact.mobile" type="number" class="form-control" placeholder="Mobile" />
           </div>
           <div class="mb-2">
-            <input type="text" class="form-control" placeholder="Address" />
+            <input required v-model="contact.address" type="text" class="form-control" placeholder="Address" />
           </div>
           <div class="mb-2">
-            <input type="text" class="form-control" placeholder="Username" />
+            <input required v-model="contact.username" type="text" class="form-control" placeholder="Username" />
           </div>
           <div class="mb-2">
-            <input type="text" class="form-control" placeholder="Password" />
+            <input required v-model="contact.password" type="text" class="form-control" placeholder="Password" />
           </div>
           <div class="mb-2">
-            <input type="submit" class="btn btn-success" value="Update" />
+            <input required type="submit" class="btn btn-success" value="Update" />
           </div>
         </form>
       </div>
       <div class="col-md-4">
         <img
-          src="https://img.icons8.com/?size=512&id=QYqNSpKRKelP&format=png"
+          :src="`${contact.photoUrl}`"
           alt=""
           class="contact-img"
         />
@@ -59,7 +59,43 @@
 </template>
 
 <script>
+import { ContactService } from '@/services/ContactService';
 export default {
   name: "EditContact",
+  data : function (){
+    return{ 
+    contactId : this.$route.params.contactId,
+    loading: false,
+    contact : {},
+    errorMessage : null
+
+    }
+},
+created : async function (){
+    try {
+        this.loading = true;
+        let response = await ContactService.getContact(this.contactId);
+        this.contact = response.data
+        this.loading = false;
+    } catch (error) {
+        this.errorMessage = error;
+        this.loading = false;
+    }
+},
+methods : {
+    updateSubmit : async function (){
+          try {
+            let response = await ContactService.updateContact(this.contact, this.contactId);
+            if(response){
+                return this.$router.push('/');
+            }else{
+                return this.$router.push(`/contacts/edit/${this.contactId}`)
+            }
+        } catch (error) {
+            console.log(error);
+        }
+    }
+    
+}
 };
 </script>
