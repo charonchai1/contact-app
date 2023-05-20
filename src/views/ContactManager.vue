@@ -1,94 +1,29 @@
 <template>
-  <div class="container mt-3">
+  <div class="">
     
     <div class="row">
       <div class="col">
-        <p class="h3 text-success fw-bold">
-          Contact Manager
-          <router-link to="/contacts/add" class="btn btn-success btn-sm"
-            ><i class="fa fa-plus-circle">New</i></router-link
-          >
-        </p>
-        <p>Loremispsafasfla</p>
+      
         <form>
           <div class="row">
             <div class="col-md-6">
-              <div class="row">
-                <div class="col">
+              <div class="my-3">
+                  <h1>Contact Manager</h1>
+              </div>
+                <div class="col-md-6">
                   <input
+                 
                     v-model="searchValue"
                     type="text"
                     class="form-control"
                     placeholder="Search Name"
                   />
 
-                  <div class="user-container" v-if="userList.length && searchValue != 0">
-                    <div v-for="(user, index) in userList" :key="index">
-                      <div class="card my-2 list-group-item-success shadow-lg">
-                        <div class="card-body">
-                          <div class="row align-items-center">
-                            <div class="col-sm-4">
-                              <img
-                                :src="user.photoUrl"
-                                alt=""
-                                class="contact-img"
-                              />
-                            </div>
-                            <div class="col-sm-7">
-                              <ul class="list-group">
-                                <li class="list-group-item">
-                                  Name :
-                                  <span class="fw-bold">{{ user.name }}</span>
-                                </li>
-                                <li class="list-group-item">
-                                  BirthDate :
-                                  <span class="fw-bold">{{
-                                    user.birthdate
-                                  }}</span>
-                                </li>
-                                <li class="list-group-item">
-                                  Mobile :
-                                  <span class="fw-bold">{{ user.mobile }}</span>
-                                </li>
-                              </ul>
-                            </div>
-                            <div
-                              class="col-sm-1 d-flex flex-column justify-content-center align-items-center"
-                            >
-                              <router-link
-                                :to="`/contacts/view/${user.id}`"
-                                class="btn btn-warning my-1"
-                              >
-                                <i class="fa fa-eye"></i>
-                              </router-link>
-                              <router-link
-                                :to="`/contacts/edit/${user.id}`"
-                                class="btn btn-primary my-1"
-                              >
-                                <i class="fa fa-pen"></i>
-                              </router-link>
-                              <button
-                                class="btn btn-danger my-1"
-                                @click="clickDeleteContact(user.id)"
-                              >
-                                <i class="fa fa-trash"></i>
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    
-                  </div>
+                 
                   <div v-if="searchValue&&!userList.length">No user Found</div>
 
                 </div>
-                <div class="col">
-
-                  <input type="submit" class="btn btn-outline-dark" />
-
-                </div>
-              </div>
+           
             </div>
           </div>
         </form>
@@ -115,29 +50,29 @@
       </div>
     </div>
   </div>
-
-  <div class="container mt-3" v-if="contacts.length > 0">
+  <div class="container mt-3" v-if="userList.length">
+    
     <div class="row">
-      <div class="col-md-6" v-for="contact of contacts" :key="contact">
-        <div class="card my-2 list-group-item-success shadow-lg">
+      <div class="col-md-6" v-for="user of userList" :key="user">
+        <div class="card my-4 list-group-item-success shadow-lg">
           <div class="card-body">
             <div class="row align-items-center">
-              <div class="col-sm-4">
-                <img :src="contact.photoUrl" alt="" class="contact-img" />
+              <div class="col-sm-3">
+                <img :src="user.photoUrl" alt="" class="contact-img" />
               </div>
               <div class="col-sm-7">
                 <ul class="list-group">
                   <li class="list-group-item">
                     Name :
-                    <span class="fw-bold">{{ contact.name }}</span>
+                    <span class="fw-bold">{{ user.name }}</span>
                   </li>
                   <li class="list-group-item">
                     BirthDate :
-                    <span class="fw-bold">{{ contact.birthdate }}</span>
+                    <span class="fw-bold">{{ user.birthdate }}</span>
                   </li>
                   <li class="list-group-item">
                     Mobile :
-                    <span class="fw-bold">{{ contact.mobile }}</span>
+                    <span class="fw-bold">{{ user.mobile }}</span>
                   </li>
                 </ul>
               </div>
@@ -145,20 +80,20 @@
                 class="col-sm-1 d-flex flex-column justify-content-center align-items-center"
               >
                 <router-link
-                  :to="`/contacts/view/${contact.id}`"
+                  :to="`/contacts/view/${user.id}`"
                   class="btn btn-warning my-1"
                 >
                   <i class="fa fa-eye"></i>
                 </router-link>
                 <router-link
-                  :to="`/contacts/edit/${contact.id}`"
+                  :to="`/contacts/edit/${user.id}`"
                   class="btn btn-primary my-1"
                 >
                   <i class="fa fa-pen"></i>
                 </router-link>
                 <button
                   class="btn btn-danger my-1"
-                  @click="clickDeleteContact(contact.id)"
+                  @click="clickDeleteContact(user.id)"
                 >
                   <i class="fa fa-trash"></i>
                 </button>
@@ -227,3 +162,8 @@ export default {
   },
 };
 </script>
+
+<style>
+
+ 
+</style>

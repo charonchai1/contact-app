@@ -43,8 +43,14 @@ export default {
   flex-direction: row;
 }
 .position{
-     position: fixed;
-    width: 100%;
-    height: 50px;
+     background-color:#990000;
+  position:fixed;  
+  z-index:1; /*Add this*/
+  width:100%;
+  height:50px;
+  text-align:center;
+  vertical-align:middle;
+  line-height:50px;
+  top:0px;
  }
 </style>
