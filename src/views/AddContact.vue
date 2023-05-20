@@ -2,15 +2,13 @@
   <div class="container mt-3">
     <div class="row">
       <div class="col">
-        <p class="h3 text-success fw-bold">Add Contact</p>
-        <p class="fst-italic">djwqdklqklwqjklwqjklwqjkl</p>
+        <p class="h3 text-success fw-bold">Create Contact Manager</p>
       </div>
     </div>
   </div>
-  <pre>{{contact}}</pre>
-  <div class="container mt-3">
+  <div class="container mt-4">
     <div class="row">
-      <div class="col-md-4">
+      <div class="col-md-100">
         <form @submit.prevent="submitCreate()"> 
           <div class="mb-2">
             <input required v-model="contact.name" type="text" class="form-control" placeholder="Full Name" />
