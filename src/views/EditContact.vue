@@ -1,18 +1,13 @@
 <template>
-  <div class="container mt-3">
+  <div class="">
     <div class="row">
       <div class="col">
         <p class="h3 text-success fw-bold">Edit Contact</p>
-        <p class="fst-italic">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero dolorem
-          quis maxime maiores corporis eveniet debitis illo. Aliquam veniam ipsa
-          commodi? Similique, illum voluptatem! Similique temporibus repellendus
-          quidem aliquid provident.
-        </p>
+       
       </div>
     </div>
   </div>
-  <div class="container mt-3">
+  <div class="">
     <div class="row">
       <div class="col-md-4">
         <form @submit.prevent ="updateSubmit()">

@@ -1,17 +1,16 @@
-
-
-body{
+body {
     margin-top: 100px;
-    background-color: #efeff1  !important;
-    
-}
-
-.contact-img{
+    background-color: #efeff1 !important;
+  }
+  
+  .contact-img {
     width: 150px;
+    height: 150px;
+    object-fit: cover;
     border-radius: 50%;
-}
-
-.contact-img-big{
+  }
+  
+  .contact-img-big {
     width: 200px;
     border-radius: 50%;
-}
+  }

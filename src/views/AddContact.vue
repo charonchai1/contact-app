@@ -1,12 +1,12 @@
 <template>
-  <div class="container mt-3">
+  <div class="">
     <div class="row">
       <div class="col">
         <p class="h3 text-success fw-bold">Create Contact Manager</p>
       </div>
     </div>
   </div>
-  <div class="container mt-4">
+  <div class="container mt-2">
     <div class="row">
       <div class="col-md-100">
         <form @submit.prevent="submitCreate()"> 
@@ -37,9 +37,7 @@
           </div>
         </form>
       </div>
-        <div class="col-md-4">
-            <img :src="contact.photoUrl" alt="" class="contact-img">
-        </div>
+       
     </div>
   </div>
 </template>

@@ -1,27 +1,21 @@
 <template>
-  <div class="container mt-3">
+  <div class="">
     <div class="row">
       <div class="col">
         <p class="h3 text-success fw-bold">View Contact</p>
-        <p class="fst-italic">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo
-          architecto quam tenetur dolorem reiciendis quia aspernatur amet
-          nostrum possimus velit! Amet harum animi incidunt dolore dignissimos
-          facilis dolorum laudantium exercitationem.
-        </p>
       </div>
     </div>
   </div>
   <div class="container">
     <div class="row align-items-center">
-      <div class="col-md-4">
+      <div class="img">
         <img
           :src="contact.photoUrl"
           alt=""
           class="contact-img-big"
         />
       </div>
-      <div class="col-md-6">
+      <div class="">
         <ul class="list-group">
           <li class="list-group-item">
             Name :
@@ -47,18 +41,18 @@
             Password :
             <span class="fw-bold">{{contact.password}}</span>
           </li>
-        </ul>
-      </div>
-    </div>
-     <div class="row mt-3">
+        </ul> <div class="row mt-3">
         <div class="col">
             <router-link to="/" class="btn btn-success">
             <i class="fa fa-arrow-circle-left"></i>
             Back</router-link>
         </div>
      </div>
+      </div>
+    </div>
+    
   </div>
-  <pre>{{contact}}</pre>
+  
 </template>
 
 <script>
@@ -86,3 +80,13 @@ export default {
   }
 };
 </script> 
+
+
+<style>
+
+.img{
+  margin: 5%;
+}
+
+
+</style>
