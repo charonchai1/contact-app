@@ -29,7 +29,7 @@
           </li>
           <li class="list-group-item">
             BirthDate :
-            <span class="fw-bold">{{contact.birthDate}}}</span>
+            <span class="fw-bold">{{contact.birthdate}}</span>
           </li>
           <li class="list-group-item">
             Mobile :

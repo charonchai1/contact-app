@@ -83,7 +83,9 @@
 
                 </div>
                 <div class="col">
+
                   <input type="submit" class="btn btn-outline-dark" />
+
                 </div>
               </div>
             </div>
@@ -92,7 +94,6 @@
       </div>
     </div>
   </div>
-
   <!-- Spinnner -->
   <div v-if="loading">
     <div class="container">
